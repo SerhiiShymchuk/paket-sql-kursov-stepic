@@ -1,0 +1,12 @@
+SET foreign_key_checks = 0;
+DROP TABLE IF EXISTS wp_users;
+DROP TABLE IF EXISTS wp_posts;
+DROP TABLE IF EXISTS wp_comments;
+DROP TABLE IF EXISTS blog_users;
+DROP TABLE IF EXISTS blog_posts;
+DROP TABLE IF EXISTS blog_comments;
+SET foreign_key_checks = 1;
+CREATE TABLE wp_users (id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT);
+CREATE TABLE wp_posts (id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT);
+CREATE TABLE wp_comments (id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT);
+rename table wp_users to blog_users, wp_posts to blog_posts, wp_comments to blog_comments;

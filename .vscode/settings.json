@@ -1,0 +1,20 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "askForPassword": true,
+            "driver": "MySQL",
+            "name": "shultails",
+            "database": "firstbase",
+            "username": "root"
+        }
+    ],
+    "database-client.highlightSQLBlock": true,
+    "sql-formatter.linesBetweenQueries": 1,
+    "sql-formatter.uppercase": true
+}

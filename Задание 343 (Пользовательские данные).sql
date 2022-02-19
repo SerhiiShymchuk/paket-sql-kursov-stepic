@@ -1,0 +1,15 @@
+SET foreign_key_checks = 0;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS users_data;
+SET foreign_key_checks = 1;
+CREATE TABLE users (
+    id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name  VARCHAR(50) NOT NULL,
+    date_joined DATETIME NOT NULL
+);
+CREATE TABLE users_data (
+    id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    bio TEXT,
+    FOREIGN KEY users_data(id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
